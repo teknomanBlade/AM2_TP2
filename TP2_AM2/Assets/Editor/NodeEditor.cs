@@ -34,7 +34,7 @@ public class NodeEditor : Editor
             var p = Camera.current.WorldToScreenPoint(_target.transform.position);
             //calculamos posición...
             var r = new Rect(p.x - 50, Screen.height - p.y - 50, 80, 30);
-            if (GUI.Button(r, "Select Node")) {
+            if (GUI.Button(r, "Show Info")) {
                 _showData = !_showData;
             }
 
