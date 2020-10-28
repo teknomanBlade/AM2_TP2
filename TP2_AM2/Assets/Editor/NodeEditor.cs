@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CustomEditor(typeof(Node))]
 public class NodeEditor : Editor
@@ -46,6 +48,7 @@ public class NodeEditor : Editor
 
     private void DrawInspectorInScene()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.BeginArea(new Rect(20, 20, 250, 250));
         var rec = EditorGUILayout.BeginVertical();
         //me crea un fondo de color que ocupa todo el rect creado por el Begin/EndVertical
@@ -56,5 +59,12 @@ public class NodeEditor : Editor
         _target.isPath = EditorGUILayout.Toggle("Is Path: " , _target.isPath);
         EditorGUILayout.EndVertical();
         GUILayout.EndArea();
+        if (!Application.isPlaying)
+        {
+            if (EditorGUI.EndChangeCheck())
+            {
+                EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+            }
+        }
     }
 }
