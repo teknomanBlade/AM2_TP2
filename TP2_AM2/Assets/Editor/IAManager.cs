@@ -137,6 +137,7 @@ public class IAManager : EditorWindow
     public void ClearPathNodes() {
         foreach (var item in _nodesGenerator.grid)
         {
+            item.ClearNode();
             if(item.isPath)
                 item.isPath = false;
         }
