@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class AStar : MonoBehaviour
 {
     private List<Node> _visited = new List<Node>();

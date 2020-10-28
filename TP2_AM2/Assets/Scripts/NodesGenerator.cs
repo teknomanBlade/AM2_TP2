@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class NodesGenerator : MonoBehaviour
 {
     public static bool IsFirst = true;
@@ -11,6 +12,18 @@ public class NodesGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetRandomBlockedNodes();
+        StartCoroutine(DrawNeighbours());
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void SetRandomBlockedNodes() {
         foreach (var item in grid)
         {
             var value = Random.Range(0, 7);
@@ -20,23 +33,17 @@ public class NodesGenerator : MonoBehaviour
                 {
                     item.isBlocked = false;
                 }
-                else {
+                else
+                {
                     item.isBlocked = true;
                 }
-                
+
             }
-            else {
+            else
+            {
                 item.isBlocked = false;
             }
         }
-        StartCoroutine(DrawNeighbours());
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     IEnumerator DrawNeighbours()
