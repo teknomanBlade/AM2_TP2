@@ -12,17 +12,22 @@ public class PreviewWindow : EditorWindow
     Vector3 _previous;
     Vector3 _actual;
     List<Node> _path = new List<Node>();
-    [MenuItem("Custom/Path Preview")]
+    /*[MenuItem("Custom/Path Preview")]
     public static void ShowWindow()
     {
         GetWindow<PreviewWindow>().Show();
+    }*/
+    public void Initialize(List<Node> pathIA) {
+        _path = pathIA;
     }
+
     private void OnGUI()
     {
         
         if (_path.Count == 0)
         {
-            _path = FindObjectOfType<IALauncher>().path;
+            //_path = FindObjectOfType<IALauncher>().path;
+            //_path = FindObjectOfType<IAManager>().PathIA;
             Debug.Log("agarre lista/////////    " + _path.Count);
         }
         else

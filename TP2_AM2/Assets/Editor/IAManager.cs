@@ -16,7 +16,17 @@ public class IAManager : EditorWindow
     private Node _initialNode;
     private Node _endNode;
     private Node _selectedNode;
+    private PreviewWindow _previewWindow;
     private List<Node> _pathIA;
+    public List<Node> PathIA
+    {
+        get {
+            return _pathIA;
+        }
+        set {
+            _pathIA = value;
+        }
+    }
     public bool IsNullNodeInitialAndFinal { get; set; }
     [MenuItem("IA/IA Manager")]
     public static void OpenWindow() {
@@ -29,7 +39,7 @@ public class IAManager : EditorWindow
     public void Initialize() {
         AStar = FindObjectOfType<AStar>();
         _nodesGenerator = FindObjectOfType<NodesGenerator>();
-        _pathIA = new List<Node>();
+        PathIA = new List<Node>();
         _guiStyleNodeInitialTitle = new GUIStyle()
         {
             fontSize = 12,
@@ -82,8 +92,8 @@ public class IAManager : EditorWindow
             
             if (_initialNode != null && _endNode != null)
             {
-                
-                _pathIA = AStar.GetPath(_initialNode, _endNode);
+
+                PathIA = AStar.GetPath(_initialNode, _endNode);
                 IsNullNodeInitialAndFinal = false;
             }
             else {
@@ -103,24 +113,31 @@ public class IAManager : EditorWindow
             ClearPathNodes();
         }
 
+        if (GUILayout.Button("Preview Path IA"))
+        {
+            _previewWindow = GetWindow<PreviewWindow>();
+            _previewWindow.Initialize(PathIA);
+            _previewWindow.Show();
+        }
+
         EditorGUILayout.BeginHorizontal();
             //EditorGUILayout.LabelField("Node Path Map", _guiStyleSubTitle);
             EditorGUILayout.LabelField("Waypoint Path Vectors", _guiStyleSubTitle);
         EditorGUILayout.EndHorizontal();
 
         LoadSpaces(2);
-        if (_pathIA.Count > 0) {
+        if (PathIA.Count > 0) {
             scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Height(550));
-            for (int i = 0; i < _pathIA.Count; i++)
+            for (int i = 0; i < PathIA.Count; i++)
             {
                 EditorGUILayout.BeginVertical();
                 //EditorGUILayout.SelectableLabel(_pathIA[i].gameObject.name, _guiStyleNodeTitle);
-                HighlightInitialAndFinalNodes(_pathIA, i);
-                _pathIA[i].isPath = true;
+                HighlightInitialAndFinalNodes(PathIA, i);
+                PathIA[i].isPath = true;
                     EditorGUILayout.BeginHorizontal();
-                    _pathIA[i].gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, _pathIA[i].gameObject.transform.position);
+                PathIA[i].gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, PathIA[i].gameObject.transform.position);
                     if(GUILayout.Button("Select")){
-                        _selectedNode = _pathIA[i];
+                        _selectedNode = PathIA[i];
                         EditorGUIUtility.PingObject(_selectedNode);
                         Selection.activeGameObject = _selectedNode.gameObject;
                     }
@@ -142,21 +159,21 @@ public class IAManager : EditorWindow
                 item.isPath = false;
         }
 
-        _pathIA.Clear();
+        PathIA.Clear();
     }
 
     public void HighlightInitialAndFinalNodes(List<Node> pathIA, int index) {
-        if (_pathIA[index].Equals(_initialNode))
+        if (pathIA[index].Equals(_initialNode))
         {
-            EditorGUILayout.SelectableLabel(_pathIA[index].gameObject.name, _guiStyleNodeInitialTitle);
+            EditorGUILayout.SelectableLabel(pathIA[index].gameObject.name, _guiStyleNodeInitialTitle);
         }
-        else if (_pathIA[index].Equals(_endNode))
+        else if (pathIA[index].Equals(_endNode))
         {
-            EditorGUILayout.SelectableLabel(_pathIA[index].gameObject.name, _guiStyleNodeFinalTitle);
+            EditorGUILayout.SelectableLabel(pathIA[index].gameObject.name, _guiStyleNodeFinalTitle);
         }
         else
         {
-            EditorGUILayout.SelectableLabel(_pathIA[index].gameObject.name, _guiStyleNodeTitle);
+            EditorGUILayout.SelectableLabel(pathIA[index].gameObject.name, _guiStyleNodeTitle);
         }
     }
 
