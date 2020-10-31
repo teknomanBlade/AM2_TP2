@@ -12,53 +12,71 @@ public class PreviewWindow : EditorWindow
     Vector3 _previous;
     Vector3 _actual;
     List<Node> _path = new List<Node>();
+    GUIStyle _importantStyle = new GUIStyle();
+    GUIStyle _secStyle = new GUIStyle();
+    float _radius;
     /*[MenuItem("Custom/Path Preview")]
     public static void ShowWindow()
     {
         GetWindow<PreviewWindow>().Show();
     }*/
+    private void Awake()
+    {
+        _importantStyle.fontSize = 30;
+        _importantStyle.fontStyle = FontStyle.Bold;
+        _secStyle.fontSize = 15;
+        _radius = 10;
+        wantsMouseMove = true;
+    }
     public void Initialize(List<Node> pathIA) {
         _path = pathIA;
     }
 
     private void OnGUI()
     {
-        
+        DrawNode();
+        Repaint();
+    }
+    private void DrawNode()
+    {
         if (_path.Count == 0)
         {
-            //_path = FindObjectOfType<IALauncher>().path;
-            //_path = FindObjectOfType<IAManager>().PathIA;
-            Debug.Log("agarre lista/////////    " + _path.Count);
+            Handles.color = Color.red;
+            Handles.Label(Vector2.zero, "NO AVAILABLE NODES", _importantStyle);
         }
         else
         {
             for (int i = 0; i < _path.Count; i++)
             {
-                Handles.color = Color.red;
                 _actual = new Vector3(50 + _path[i].transform.position.z * 20, 50 + _path[i].transform.position.x * 10);
-                Handles.DrawSolidDisc(_actual, Vector3.forward, 10);
-                
-                if (i > 0)
+                if (i == 0)
+                {
+                    Debug.Log("START");
+                    Handles.color = Color.green;
+                    Handles.Label(_actual, "Start", _importantStyle);
+                    Handles.DrawSolidDisc(_actual, Vector3.forward, _radius/2);
+                }
+                else if (i == _path.Count - 1)
+                {
+                    Debug.Log("END");
+                    Handles.color = Color.red;
+                    Handles.Label(_actual, "End", _importantStyle);
+                    Handles.DrawSolidDisc(_actual, Vector3.forward, _radius);
+                }
+                else
                 {
                     Handles.color = Color.blue;
+                    Handles.DrawSolidDisc(_actual, Vector3.forward, _radius/2);
+                    Handles.Label(_actual, "Node " + i, _secStyle);
+                }
+                if (i > 0)
+                {
+                    Handles.color = Color.black;
                     Handles.DrawLine(_previous, _actual);
                 }
                 _previous = _actual;
             }
-            
         }
-        
-
-        //if (path.Count != 0)
-        //    DrawNode();
-        //this.Repaint();
-    }
-
-    private void DrawNode()
-    {
-        //foreach (var node in path)
-        //{
-        //    Handles.DrawSolidDisc(new Vector3(node.transform.position.x / 2, node.transform.position.y / 2, node.transform.position.z / 2), node.transform.up, 5);
-        //}
+       
     }
 }
