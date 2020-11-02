@@ -116,8 +116,9 @@ public class IAManager : EditorWindow
         if (GUILayout.Button("Preview Path IA"))
         {
             _previewWindow = GetWindow<PreviewWindow>();
+            _previewWindow.start = new Vector2(position.xMin, position.yMin);
+            _previewWindow.offset = new Vector2(position.width, position.height);
             _previewWindow.Initialize(PathIA);
-            _previewWindow.Show();
         }
 
         EditorGUILayout.BeginHorizontal();

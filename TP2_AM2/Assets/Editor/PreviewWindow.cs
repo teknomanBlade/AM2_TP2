@@ -15,11 +15,8 @@ public class PreviewWindow : EditorWindow
     GUIStyle _importantStyle = new GUIStyle();
     GUIStyle _secStyle = new GUIStyle();
     float _radius;
-    /*[MenuItem("Custom/Path Preview")]
-    public static void ShowWindow()
-    {
-        GetWindow<PreviewWindow>().Show();
-    }*/
+    public Vector2 start;
+    public Vector2 offset;
     private void Awake()
     {
         _importantStyle.fontSize = 30;
@@ -30,12 +27,13 @@ public class PreviewWindow : EditorWindow
     }
     public void Initialize(List<Node> pathIA) {
         _path = pathIA;
+        position = new Rect(new Vector2(start.x+offset.x,start.y), new Vector2(offset.x * 2, offset.y));
+        Show();
     }
 
     private void OnGUI()
     {
         DrawNode();
-        Repaint();
     }
     private void DrawNode()
     {
