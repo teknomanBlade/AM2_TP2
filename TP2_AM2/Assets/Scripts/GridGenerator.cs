@@ -9,6 +9,7 @@ public class GridGenerator : MonoBehaviour
 	public int width; //cantidad de nodos por ancho
 	public int height; //cantidad de nodos por alto
 	public float offset; //la distancia entre los nodos
+    public Vector3 InitialPos; //posición inicial de la grilla, Nico fijate de usarla, saludos JM
 
 	private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
 	private List<OtherNodeNicolas> _myNodes = new List<OtherNodeNicolas>(); //lista de todos los nodos generados
