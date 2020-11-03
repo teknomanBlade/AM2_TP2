@@ -18,11 +18,11 @@ public class NodeEditorScene : Editor
     {
 
 
-        if (!_target.isBlocked)
+        if (_target.isPath)
         {
             Handles.color = Color.green;
         }
-        else
+        if(_target.isBlocked)
         {
             Handles.color = Color.red;
         }
