@@ -26,8 +26,8 @@ public class NodesGenerator : MonoBehaviour
     public void SetRandomBlockedNodes() {
         foreach (var item in grid)
         {
-            var value = Random.Range(0, 7);
-            if (value > 3)
+            var value = Random.Range(0f, 5f);
+            if (value > 2.5f)
             {
                 if (item.name.Equals("Node") || item.name.Equals("Node (109)"))
                 {
