@@ -7,7 +7,7 @@ public class tempNodoJM : MonoBehaviour
     public List<int> NeighboursID = new List<int>() { 3, 5, 7, 9 };
     public int NodeID;
     public int NodeWeight;
-    public float Area = 1;
+    public float radius = 1;
     public bool IsActive;
 
     // Start is called before the first frame update

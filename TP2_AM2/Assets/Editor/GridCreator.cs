@@ -6,10 +6,11 @@ using UnityEditor;
 public class GridCreator : EditorWindow
 {
     private GUIStyle _wStyle;
+    private GridGenerator Grid_Generator;
     //nodos de ancho de la grilla
-    public int NodesWidth;
+    public int width;
     //nodos de alto de la grilla
-    public int NodesHeight;
+    public int height;
     //posición inicial de la grilla
     public Vector3 InitialPos;
     //floats de la posición inicial de la grilla
@@ -39,11 +40,12 @@ public class GridCreator : EditorWindow
 
     private void OnGUI()
     {
+        Grid_Generator = FindObjectOfType<GridGenerator>();
         EditorGUILayout.BeginVertical(GUILayout.Height(110));
         GUILayout.Label("Seleccione ancho y alto de la grilla. El mínimo es 2x2");
         EditorGUILayout.BeginHorizontal(GUILayout.Width(10));
-        NodesWidth= EditorGUILayout.IntField("Ancho", NodesWidth);
-        NodesHeight = EditorGUILayout.IntField("Alto", NodesHeight);
+        width= EditorGUILayout.IntField("Ancho", width);
+        height = EditorGUILayout.IntField("Alto", height);
         EditorGUILayout.EndHorizontal();
         GUILayout.Label("Seleccione posición inicial de la grila en X, Y y Z");
         EditorGUILayout.BeginHorizontal(GUILayout.Width(5));
@@ -58,8 +60,10 @@ public class GridCreator : EditorWindow
         if(GUILayout.Button("Crear Grilla"))
         {
             CheckValues();
-
             //pasar parámetros de ancho alto y posición a Nico
+            Grid_Generator.height = height;
+            Grid_Generator.width = width;
+            Grid_Generator.InitialPos = InitialPos;
         }
 
 
@@ -72,15 +76,15 @@ public class GridCreator : EditorWindow
 
     private void CheckValues()
     {
-        if (NodesWidth < 2)
+        if (width < 2)
         {
-           NodesWidth=_minWidth;
+           width=_minWidth;
             Repaint();
         }
 
-        if (NodesHeight < 2)
+        if (height < 2)
         {
-            NodesHeight = _minHeight;
+            height = _minHeight;
             Repaint();
         }
 

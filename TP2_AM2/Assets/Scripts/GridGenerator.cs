@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class GridGenerator : MonoBehaviour
 {
-	public OtherNodeNicolas sphere; //este es un nodo temporal
+	public Node sphere; //este es un nodo temporal
 	public int width; //cantidad de nodos por ancho
 	public int height; //cantidad de nodos por alto
 	public float offset; //la distancia entre los nodos
+    public Vector3 InitialPos; //posición inicial de la grilla, Nico fijate de usarla
 
 	private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
-	private List<OtherNodeNicolas> _myNodes = new List<OtherNodeNicolas>(); //lista de todos los nodos generados
+	private List<Node> _myNodes = new List<Node>(); //lista de todos los nodos generados
 
 	// Start is called before the first frame update
 	void Start()
@@ -36,7 +37,7 @@ public class GridGenerator : MonoBehaviour
 				var tempNode = Instantiate(sphere, new Vector3(j * offset, 0, i * offset), Quaternion.identity);
 				tempNode.transform.SetParent(_container);
 				tempNode.transform.name = "Node " + counter;
-
+                tempNode.NodeID = counter;
 				tempNode.radius = offset;
 				_myNodes.Add(tempNode);
 

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof (tempNodoJM))]
+[CustomEditor(typeof (Node))]
 public class NodeEditorScene : Editor
 {
-    tempNodoJM _target;
+    Node _target;
 
     private void OnEnable()
     {
-        _target=(tempNodoJM)target;
+        _target=(Node)target;
     }
 
 
@@ -18,15 +18,15 @@ public class NodeEditorScene : Editor
     {
 
 
-        if (_target.IsActive)
+        if (_target.isPath)
         {
             Handles.color = Color.green;
         }
-        else
+        if(_target.isBlocked)
         {
             Handles.color = Color.red;
         }
 
-        Handles.DrawWireDisc(_target.transform.position, _target.transform.up, _target.Area);
+        Handles.DrawWireDisc(_target.transform.position, _target.transform.up, _target.radius);
     }
 }

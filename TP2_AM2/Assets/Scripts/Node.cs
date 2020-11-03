@@ -22,6 +22,8 @@ public class Node : MonoBehaviour
     public bool isBlocked;
     //Una vez que ya tengo un camino paso esto a true solo para los gizmos
     public bool isPath;
+    public int NodeID;
+   
 
 
 
@@ -48,35 +50,52 @@ public class Node : MonoBehaviour
         previous = null;
     }
 
-    private void OnDrawGizmos()
+    //Esto detecta si el nodo esta adentro del nivel
+    bool RaycastHit()
     {
-        if (isBlocked) { 
-            Gizmos.color = Color.red;
-            transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
-        }
-        else
-        {
-            Gizmos.color = Color.white;
-            transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
-            //Gizmos.DrawWireSphere(transform.position, radious);
-        }
-        if (isPath)
-        {
-            Gizmos.color = Color.green;
-            transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
-            if (previous)
-                Gizmos.DrawLine(transform.position, previous.transform.position);
-        }
+        if (Physics.Raycast(transform.localPosition + Vector3.up, Vector3.down, 1f)) return true;
 
-
-        Gizmos.DrawWireSphere(transform.position, radius);
-
-        /*foreach (var n in neighbors)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(transform.position, n.transform.position);
-        }*/
-
-
+        return false;
     }
+
+    //Esta función se comunica con el generador para decirle si el nodo esta adentro o no
+    public Node NodesToDeactivate()
+    {
+        if (RaycastHit()) return null;
+        return this;
+    }
+
+
+
+    //private void OnDrawGizmos()
+    //{
+    //    if (isBlocked) { 
+    //        Gizmos.color = Color.red;
+    //        transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
+    //    }
+    //    else
+    //    {
+    //        Gizmos.color = Color.white;
+    //        transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+    //        //Gizmos.DrawWireSphere(transform.position, radious);
+    //    }
+    //    if (isPath)
+    //    {
+    //        Gizmos.color = Color.green;
+    //        transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
+    //        if (previous)
+    //            Gizmos.DrawLine(transform.position, previous.transform.position);
+    //    }
+
+
+    //    Gizmos.DrawWireSphere(transform.position, radius);
+
+    //    /*foreach (var n in neighbors)
+    //    {
+    //        Gizmos.color = Color.yellow;
+    //        Gizmos.DrawLine(transform.position, n.transform.position);
+    //    }*/
+
+
+    //}
 }
