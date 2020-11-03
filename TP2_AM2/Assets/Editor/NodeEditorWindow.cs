@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class NodeEditorWindow : EditorWindow
 {
     private GUIStyle _wStyle;
-    public int SetNodeWeight;
+    public float SetNodeWeight;
     public int SetNodeID;
-    public tempNodoJM Nodo;
+    public Node Nodo;
     private bool _showFoldout;
 
     [MenuItem("Custom Tools/Node Editor")]
@@ -32,20 +32,21 @@ public class NodeEditorWindow : EditorWindow
     {
         EditorGUI.BeginChangeCheck();
 
-        Nodo = (tempNodoJM)EditorGUILayout.ObjectField("Nodo: ", Nodo, typeof(tempNodoJM), true);
+        Nodo = (Node)EditorGUILayout.ObjectField("Nodo: ", Nodo, typeof(Node), true);
 
 
         Nodo.NodeID = EditorGUILayout.IntField("ID", Nodo.NodeID);
-        Nodo.NodeWeight = EditorGUILayout.IntField("Peso", Nodo.NodeWeight);
+        Nodo.f = EditorGUILayout.FloatField("Peso", Nodo.f);
         Repaint();
 
-        _showFoldout = EditorGUILayout.Foldout(_showFoldout, "La cantidad de nodos vecinos es "+ Nodo.NeighboursID.Count);
-        if (_showFoldout && Nodo.NeighboursID.Count!=0)
+        _showFoldout = EditorGUILayout.Foldout(_showFoldout, "La cantidad de nodos vecinos es "+ Nodo.neighbors.Count);
+        if (_showFoldout && Nodo.neighbors.Count!=0)
         {
             EditorGUILayout.BeginVertical();
-            for (int i = 0; i < Nodo.NeighboursID.Count; i++)
+            for (int i = 0; i < Nodo.neighbors.Count; i++)
             {
-                EditorGUILayout.IntField("ID Vecino " + (i+1), Nodo.NeighboursID[i]);
+                EditorGUILayout.IntField("ID Vecino " + (i+1), Nodo.neighbors[i].NodeID);
+               
             }
 
         }
