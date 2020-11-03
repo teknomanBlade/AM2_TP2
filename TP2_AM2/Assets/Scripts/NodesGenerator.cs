@@ -46,6 +46,14 @@ public class NodesGenerator : MonoBehaviour
         }
     }
 
+    public void DrawNeighboursForEditor() {
+        Debug.Log("My Grid Length " + grid.Count);
+        foreach (var e in grid)
+        {
+            e.CheckNeighbors();
+        }
+    }
+
     IEnumerator DrawNeighbours()
     {
         yield return new WaitForSeconds(0.2f);

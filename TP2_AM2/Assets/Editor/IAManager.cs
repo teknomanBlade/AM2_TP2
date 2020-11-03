@@ -105,7 +105,9 @@ public class IAManager : EditorWindow
         }
 
         if (GUILayout.Button("Randomize Blocked Nodes")) {
+            ClearPathNodes();
             _nodesGenerator.SetRandomBlockedNodes();
+            _nodesGenerator.DrawNeighboursForEditor();
         }
 
         if (GUILayout.Button("Clear Path Nodes"))
@@ -113,12 +115,15 @@ public class IAManager : EditorWindow
             ClearPathNodes();
         }
 
-        if (GUILayout.Button("Preview Path IA"))
-        {
-            _previewWindow = GetWindow<PreviewWindow>();
-            _previewWindow.Initialize(PathIA);
-            _previewWindow.Show();
+        if (PathIA.Count > 0) {
+            if (GUILayout.Button("Preview Path IA"))
+            {
+                _previewWindow = GetWindow<PreviewWindow>();
+                _previewWindow.Initialize(PathIA);
+                _previewWindow.Show();
+            }
         }
+        
 
         EditorGUILayout.BeginHorizontal();
             //EditorGUILayout.LabelField("Node Path Map", _guiStyleSubTitle);
@@ -157,6 +162,8 @@ public class IAManager : EditorWindow
             item.ClearNode();
             if(item.isPath)
                 item.isPath = false;
+
+            item.neighbors = new List<Node>();
         }
 
         PathIA.Clear();
