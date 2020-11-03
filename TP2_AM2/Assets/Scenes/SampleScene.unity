@@ -8385,7 +8385,7 @@ MonoBehaviour:
   NeighboursID: 03000000050000000700000009000000
   NodeID: 1
   NodeWeight: 10
-  Area: 1
+  radius: 1
   IsActive: 0
 --- !u!4 &1697729460
 Transform:

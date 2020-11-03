@@ -136,11 +136,11 @@ public class IAManager : EditorWindow
             for (int i = 0; i < PathIA.Count; i++)
             {
                 EditorGUILayout.BeginVertical();
-                //EditorGUILayout.SelectableLabel(_pathIA[i].gameObject.name, _guiStyleNodeTitle);
-                HighlightInitialAndFinalNodes(PathIA, i);
-                PathIA[i].isPath = true;
+                    HighlightInitialAndFinalNodes(PathIA, i);
+                    PathIA[i].isPath = true;
+                    PathIA[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
                     EditorGUILayout.BeginHorizontal();
-                PathIA[i].gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, PathIA[i].gameObject.transform.position);
+                    PathIA[i].gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, PathIA[i].gameObject.transform.position);
                     if(GUILayout.Button("Select")){
                         _selectedNode = PathIA[i];
                         EditorGUIUtility.PingObject(_selectedNode);
@@ -160,9 +160,11 @@ public class IAManager : EditorWindow
         foreach (var item in _nodesGenerator.grid)
         {
             item.ClearNode();
-            if(item.isPath)
+            if (item.isPath) {
                 item.isPath = false;
-
+                item.transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+            }
+                
             item.neighbors = new List<Node>();
         }
 
