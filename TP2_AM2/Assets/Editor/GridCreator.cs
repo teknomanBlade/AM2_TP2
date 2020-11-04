@@ -64,6 +64,7 @@ public class GridCreator : EditorWindow
             Grid_Generator.height = height;
             Grid_Generator.width = width;
             Grid_Generator.InitialPos = InitialPos;
+            Grid_Generator.GenerateGrid();
         }
 
 

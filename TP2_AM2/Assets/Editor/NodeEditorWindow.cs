@@ -34,23 +34,23 @@ public class NodeEditorWindow : EditorWindow
 
         Nodo = (Node)EditorGUILayout.ObjectField("Nodo: ", Nodo, typeof(Node), true);
 
+        if (Nodo != null) {
+            Nodo.NodeID = EditorGUILayout.IntField("ID", Nodo.NodeID);
+            Nodo.f = EditorGUILayout.FloatField("Peso", Nodo.f);
+            Repaint();
 
-        Nodo.NodeID = EditorGUILayout.IntField("ID", Nodo.NodeID);
-        Nodo.f = EditorGUILayout.FloatField("Peso", Nodo.f);
-        Repaint();
-
-        _showFoldout = EditorGUILayout.Foldout(_showFoldout, "La cantidad de nodos vecinos es "+ Nodo.neighbors.Count);
-        if (_showFoldout && Nodo.neighbors.Count!=0)
-        {
-            EditorGUILayout.BeginVertical();
-            for (int i = 0; i < Nodo.neighbors.Count; i++)
+            _showFoldout = EditorGUILayout.Foldout(_showFoldout, "La cantidad de nodos vecinos es "+ Nodo.neighbors.Count);
+            if (_showFoldout && Nodo.neighbors.Count!=0)
             {
-                EditorGUILayout.IntField("ID Vecino " + (i+1), Nodo.neighbors[i].NodeID);
+                EditorGUILayout.BeginVertical();
+                for (int i = 0; i < Nodo.neighbors.Count; i++)
+                {
+                    EditorGUILayout.IntField("ID Vecino " + (i+1), Nodo.neighbors[i].NodeID);
                
+                }
+
             }
-
         }
-
 
         if (EditorGUI.EndChangeCheck())
         {

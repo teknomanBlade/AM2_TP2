@@ -115,13 +115,16 @@ public class IAManager : EditorWindow
             ClearPathNodes();
         }
 
-        if (GUILayout.Button("Preview Path IA"))
-        {
-            _previewWindow = GetWindow<PreviewWindow>();
-            _previewWindow.start = new Vector2(position.xMin, position.yMin);
-            _previewWindow.offset = new Vector2(position.width, position.height);
-            _previewWindow.Initialize(PathIA);
+        if (PathIA.Count > 0) {
+            if (GUILayout.Button("Preview Path IA"))
+            {
+                _previewWindow = GetWindow<PreviewWindow>();
+                _previewWindow.start = new Vector2(position.xMin, position.yMin);
+                _previewWindow.offset = new Vector2(position.width, position.height);
+                _previewWindow.Initialize(PathIA);
+            }
         }
+        
         
 
         EditorGUILayout.BeginHorizontal();

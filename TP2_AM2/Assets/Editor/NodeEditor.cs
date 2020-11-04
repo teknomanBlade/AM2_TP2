@@ -56,7 +56,22 @@ public class NodeEditor : Editor
         EditorGUILayout.LabelField(_target.gameObject.name + " Position: ", _guiStyleSubTitle);
         _target.gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, _target.gameObject.transform.position);
         _target.isBlocked = EditorGUILayout.Toggle("Is Blocked: ", _target.isBlocked);
+        if (_target.isBlocked)
+        {
+            _target.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
+        }
+        else {
+            _target.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+        }
+
         _target.isPath = EditorGUILayout.Toggle("Is Path: " , _target.isPath);
+        if (_target.isPath) {
+            _target.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
+        }
+        else {
+            _target.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+        }
+        
         EditorGUILayout.EndVertical();
         GUILayout.EndArea();
         if (!Application.isPlaying)

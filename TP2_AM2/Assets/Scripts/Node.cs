@@ -53,7 +53,7 @@ public class Node : MonoBehaviour
     //Esto detecta si el nodo esta adentro del nivel
     bool RaycastHit()
     {
-        if (Physics.Raycast(transform.localPosition + Vector3.up, Vector3.down, 1f)) return true;
+        if (Physics.Raycast(transform.localPosition + Vector3.up, Vector3.down, 5f)) return true;
 
         return false;
     }

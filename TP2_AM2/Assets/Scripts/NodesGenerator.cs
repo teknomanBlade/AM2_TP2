@@ -32,7 +32,30 @@ public class NodesGenerator : MonoBehaviour
 
     public void SetRandomBlockedNodes() {
         ClearNodesMaterial();
-        foreach (var item in grid)
+
+        for (int i = 0; i < grid.Count; i++)
+        {
+            var value = Random.Range(0f, 2f);
+            if (value > 1.6f)
+            {
+                if (i == 0 || i == grid.Count - 1)
+                {
+
+                    grid[i].isBlocked = false;
+                }
+                else
+                {
+                    grid[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
+                    grid[i].isBlocked = true;
+                }
+
+            }
+            else
+            {
+                grid[i].isBlocked = false;
+            }
+        }
+        /*foreach (var item in grid)
         {
             var value = Random.Range(0f, 5f);
             if (value > 2.5f)
@@ -53,7 +76,7 @@ public class NodesGenerator : MonoBehaviour
             {
                 item.isBlocked = false;
             }
-        }
+        }*/
     }
 
     public void DrawNeighboursForEditor() {

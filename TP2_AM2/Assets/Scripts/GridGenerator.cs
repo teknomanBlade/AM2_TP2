@@ -17,15 +17,17 @@ public class GridGenerator : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		GenerateGrid();
+		//GenerateGrid();
 	}
 
 	//Crea un los nodos adentro de un contenedor, según el width, height y offset
-	void GenerateGrid()
+	public void GenerateGrid()
 	{
 		if (_container != null) return;
 
-		_container = new GameObject().transform;
+        _myNodes.Clear();
+        _container = new GameObject().transform;
+        _container.transform.gameObject.AddComponent<NodesGenerator>();
 		_container.position = Vector3.zero;
 		_container.transform.name = "AllNodes";
 
@@ -45,8 +47,10 @@ public class GridGenerator : MonoBehaviour
 
 			}
 		}
+        var nodesGenerator = _container.gameObject.GetComponent<NodesGenerator>();
+        nodesGenerator.grid = _myNodes;
 
-		Debug.Log("I created the grid");
+        Debug.Log("I created the grid");
 
 		StartCoroutine(CheckNode());
 	}
