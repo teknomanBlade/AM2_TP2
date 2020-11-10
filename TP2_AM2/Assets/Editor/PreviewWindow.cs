@@ -31,6 +31,7 @@ public class PreviewWindow : EditorWindow
     public void Initialize(List<Node> pathIA) {
         _path = pathIA;
         position = new Rect(new Vector2(start.x+offset.x,start.y), new Vector2(offset.x * 2, offset.y));
+        Camera.main.transform.eulerAngles = new Vector3(Camera.main.transform.eulerAngles.x, 270, 0);
         Show();
     }
 
@@ -47,7 +48,6 @@ public class PreviewWindow : EditorWindow
         }
         else
         {
-            //GUIUtility.RotateAroundPivot(-90, new Vector2(Screen.width / 2, Screen.height / 2));
             for (int i = 0; i < _path.Count; i++)
             {
                 _actual = new Vector3(60 + _path[i].transform.position.z * 20, 80 + _path[i].transform.position.x * 15);
