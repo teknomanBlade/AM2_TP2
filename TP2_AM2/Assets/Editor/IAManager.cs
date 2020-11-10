@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -92,8 +93,13 @@ public class IAManager : EditorWindow
             
             if (_initialNode != null && _endNode != null)
             {
-
+                AStar.NodesGenerator = _nodesGenerator;
                 PathIA = AStar.GetPath(_initialNode, _endNode);
+                Debug.Log("TIENE DUPLICADOS? " + PathIA.Count);
+                var noDuplicates = PathIA.Distinct();
+                Debug.Log("FILTRA DUPLICADOS? " + noDuplicates.ToList().Count);
+                PathIA = noDuplicates.ToList();
+                
                 IsNullNodeInitialAndFinal = false;
             }
             else {

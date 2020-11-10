@@ -10,8 +10,8 @@ public class GridGenerator : MonoBehaviour
 	public int height; //cantidad de nodos por alto
 	public float offset; //la distancia entre los nodos
     public Vector3 InitialPos; //posición inicial de la grilla, Nico fijate de usarla
-
-	private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
+    public float radius;
+    private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
 	private List<Node> _myNodes = new List<Node>(); //lista de todos los nodos generados
 
 	// Start is called before the first frame update
@@ -40,8 +40,8 @@ public class GridGenerator : MonoBehaviour
 				tempNode.transform.SetParent(_container);
 				tempNode.transform.name = "Node " + counter;
                 tempNode.NodeID = counter;
-				tempNode.radius = offset;
-				_myNodes.Add(tempNode);
+                tempNode.radius = radius;
+                _myNodes.Add(tempNode);
 
 				counter++;
 

@@ -9,16 +9,25 @@ public class AStar : MonoBehaviour
     private List<Node> _notVisited = new List<Node>();
     private List<Node> _path = new List<Node>();
     private NodesGenerator _nodesGenerator;
+    public NodesGenerator NodesGenerator {
+        get {
+            return _nodesGenerator;
+        }
+        set {
+            _nodesGenerator = value;
+        }
+    }
     private Node initialNode;
     private Node finalNode;
 
     private void Start()
     {
-        _nodesGenerator = FindObjectOfType<NodesGenerator>();
+        //_nodesGenerator = FindObjectOfType<NodesGenerator>();
     }
 
     public List<Node> GetPath(Node initial, Node finalNode)
     {
+        _visited.Clear();
         foreach (var item in _nodesGenerator.grid)
         {
             item.ClearNode();

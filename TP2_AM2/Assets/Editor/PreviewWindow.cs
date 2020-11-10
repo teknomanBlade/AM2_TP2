@@ -90,7 +90,7 @@ public class PreviewWindow : EditorWindow
                         //Debug.Log("Button Clicked");
                     }
                     //Handles.DrawSolidDisc(_actual, Vector3.forward, _radius/2);
-                    Handles.Label(_actual, "Node " + i, _secStyle);
+                    Handles.Label(_actual, _path[i].name/*"Node " + i*/, _secStyle);
                 }
                 if (i > 0)
                 {
