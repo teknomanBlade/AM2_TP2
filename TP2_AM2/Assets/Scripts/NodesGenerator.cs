@@ -26,7 +26,8 @@ public class NodesGenerator : MonoBehaviour
     public void ClearNodesMaterial() {
         foreach (var item in grid)
         {
-            item.transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+            item.IsBlocked = false;
+            item.IsPath = false;
         }
     }
 
@@ -41,18 +42,18 @@ public class NodesGenerator : MonoBehaviour
                 if (i == 0 || i == grid.Count - 1)
                 {
 
-                    grid[i].isBlocked = false;
+                    grid[i].IsBlocked = false;
                 }
                 else
                 {
-                    grid[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
-                    grid[i].isBlocked = true;
+                    //grid[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
+                    grid[i].IsBlocked = true;
                 }
 
             }
             else
             {
-                grid[i].isBlocked = false;
+                grid[i].IsBlocked = false;
             }
         }
         /*foreach (var item in grid)

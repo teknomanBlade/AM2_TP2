@@ -250,12 +250,12 @@ MonoBehaviour:
   previous: {fileID: 0}
   neighbors:
   - {fileID: 1623808132}
+  - {fileID: 1868769358}
+  - {fileID: 623239858}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 47
 --- !u!135 &25070941
 SphereCollider:
@@ -643,15 +643,13 @@ MonoBehaviour:
   f: 71.79243
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 780605492}
   - {fileID: 499967791}
   - {fileID: 1323545261}
-  - {fileID: 780605492}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 15
 --- !u!135 &74843201
 SphereCollider:
@@ -860,8 +858,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 41
 --- !u!135 &89457538
 SphereCollider:
@@ -893,7 +889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1060,21 +1056,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 55.35534
   h: 35.35534
-  f: 87.781746
-  previous: {fileID: 0}
+  f: 90.71068
+  previous: {fileID: 880167055}
   neighbors:
+  - {fileID: 1324275262}
   - {fileID: 880167055}
-  - {fileID: 1425721345}
-  - {fileID: 962660862}
   - {fileID: 1314178040}
+  - {fileID: 1425721345}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 82
 --- !u!135 &126202721
 SphereCollider:
@@ -1106,7 +1100,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1370,14 +1364,12 @@ MonoBehaviour:
   f: 71.15091
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1486369103}
   - {fileID: 1986637453}
+  - {fileID: 1486369103}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 20
 --- !u!135 &144968116
 SphereCollider:
@@ -1409,7 +1401,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1484,21 +1476,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 39.142136
+  g: 46.213203
   h: 36.40055
-  f: 75.54269
-  previous: {fileID: 499967791}
+  f: 82.613754
+  previous: {fileID: 623239858}
   neighbors:
-  - {fileID: 499967791}
-  - {fileID: 1623808132}
-  - {fileID: 1421525142}
   - {fileID: 206724200}
+  - {fileID: 1623808132}
+  - {fileID: 1868769358}
+  - {fileID: 1421525142}
+  - {fileID: 623239858}
+  - {fileID: 499967791}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 27
 --- !u!135 &148352563
 SphereCollider:
@@ -1702,13 +1694,12 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 682287940}
   - {fileID: 369454570}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 52
 --- !u!135 &169287506
 SphereCollider:
@@ -1740,7 +1731,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2004,23 +1995,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 44.142136
+  g: 51.213203
   h: 35.35534
-  f: 79.497475
-  previous: {fileID: 148352562}
+  f: 86.56854
+  previous: {fileID: 1623808132}
   neighbors:
-  - {fileID: 954450129}
-  - {fileID: 2004356807}
   - {fileID: 1115209525}
+  - {fileID: 954450129}
   - {fileID: 1623808132}
-  - {fileID: 1421525142}
+  - {fileID: 1868769358}
   - {fileID: 148352562}
+  - {fileID: 2004356807}
+  - {fileID: 1421525142}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 28
 --- !u!135 &206724201
 SphereCollider:
@@ -2769,8 +2759,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 42
 --- !u!135 &314090982
 SphereCollider:
@@ -3012,20 +3000,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 52.426407
+  g: 48.28427
   h: 38.078865
-  f: 90.50527
-  previous: {fileID: 880167055}
+  f: 86.36314
+  previous: {fileID: 682287940}
   neighbors:
   - {fileID: 880167055}
+  - {fileID: 682287940}
   - {fileID: 1425721345}
-  - {fileID: 962660862}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 62
 --- !u!135 &369454571
 SphereCollider:
@@ -3132,21 +3118,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 48.28427
+  g: 51.213203
   h: 25.495098
-  f: 73.77937
+  f: 76.7083
   previous: {fileID: 1026980640}
   neighbors:
-  - {fileID: 880167055}
   - {fileID: 1026980640}
-  - {fileID: 966338890}
   - {fileID: 1823180423}
+  - {fileID: 1324275262}
+  - {fileID: 880167055}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 84
 --- !u!135 &372483705
 SphereCollider:
@@ -3347,18 +3331,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   g: Infinity
   h: 50
-  f: 67.07107
+  f: 74.142136
   previous: {fileID: 0}
   neighbors:
   - {fileID: 460738667}
   - {fileID: 1986637453}
-  - {fileID: 1718445758}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 31
 --- !u!135 &401161614
 SphereCollider:
@@ -3470,16 +3451,14 @@ MonoBehaviour:
   f: 65.20798
   previous: {fileID: 1030245710}
   neighbors:
-  - {fileID: 1030245710}
-  - {fileID: 1035791226}
-  - {fileID: 1486369103}
   - {fileID: 1902638604}
+  - {fileID: 1486369103}
+  - {fileID: 1035791226}
+  - {fileID: 1030245710}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 1
 --- !u!135 &420281983
 SphereCollider:
@@ -3770,19 +3749,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 33.28427
+  g: 36.213203
   h: 32.01562
-  f: 65.2999
+  f: 68.22882
   previous: {fileID: 470292657}
   neighbors:
+  - {fileID: 682287940}
+  - {fileID: 1351897265}
   - {fileID: 2078688480}
+  - {fileID: 1793904839}
+  - {fileID: 1191541981}
   - {fileID: 470292657}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 54
 --- !u!135 &423507741
 SphereCollider:
@@ -3814,7 +3795,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4344,12 +4325,11 @@ MonoBehaviour:
   neighbors:
   - {fileID: 372483704}
   - {fileID: 1823180423}
+  - {fileID: 1324275262}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 94
 --- !u!135 &449580484
 SphereCollider:
@@ -4459,18 +4439,14 @@ MonoBehaviour:
   g: 19.142136
   h: 46.09772
   f: 65.23985
-  previous: {fileID: 1718445758}
+  previous: {fileID: 1986637453}
   neighbors:
   - {fileID: 1125852078}
-  - {fileID: 1732412941}
   - {fileID: 1986637453}
-  - {fileID: 1718445758}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 32
 --- !u!135 &460738668
 SphereCollider:
@@ -4502,7 +4478,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4577,21 +4553,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 28.284271
+  g: 31.213203
   h: 35.35534
-  f: 63.63961
+  f: 66.56854
   previous: {fileID: 1125852078}
   neighbors:
+  - {fileID: 1793904839}
+  - {fileID: 423507740}
+  - {fileID: 506981476}
+  - {fileID: 1191541981}
   - {fileID: 1125852078}
   - {fileID: 1400245149}
-  - {fileID: 506981476}
-  - {fileID: 423507740}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 44
 --- !u!135 &470292658
 SphereCollider:
@@ -4701,18 +4677,18 @@ MonoBehaviour:
   g: 50.35534
   h: 18.027756
   f: 68.383095
-  previous: {fileID: 966338890}
+  previous: {fileID: 565706825}
   neighbors:
+  - {fileID: 952639112}
   - {fileID: 981673916}
+  - {fileID: 565706825}
   - {fileID: 1869313793}
-  - {fileID: 966338890}
   - {fileID: 1823180423}
+  - {fileID: 1351897265}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 76
 --- !u!135 &473091857
 SphereCollider:
@@ -4744,7 +4720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4916,14 +4892,12 @@ MonoBehaviour:
   f: 107.70333
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1425721345}
   - {fileID: 1314178040}
+  - {fileID: 1425721345}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 80
 --- !u!135 &494102388
 SphereCollider:
@@ -5030,21 +5004,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 34.142136
+  g: 41.213203
   h: 38.078865
-  f: 72.221
-  previous: {fileID: 780605492}
+  f: 79.29207
+  previous: {fileID: 506981476}
   neighbors:
   - {fileID: 1623808132}
   - {fileID: 148352562}
-  - {fileID: 780605492}
   - {fileID: 506981476}
+  - {fileID: 623239858}
+  - {fileID: 780605492}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 26
 --- !u!135 &499967792
 SphereCollider:
@@ -5151,22 +5124,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 31.213203
+  g: 34.142136
   h: 36.05551
-  f: 67.268715
+  f: 70.19765
   previous: {fileID: 1400245149}
   neighbors:
-  - {fileID: 499967791}
-  - {fileID: 1323545261}
+  - {fileID: 623239858}
+  - {fileID: 1191541981}
   - {fileID: 780605492}
-  - {fileID: 1400245149}
+  - {fileID: 499967791}
   - {fileID: 470292657}
+  - {fileID: 1400245149}
+  - {fileID: 1323545261}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 35
 --- !u!135 &506981477
 SphereCollider:
@@ -5273,21 +5246,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 60.35534
+  g: 57.426407
   h: 11.18034
-  f: 71.535675
+  f: 68.60675
   previous: {fileID: 1869313793}
   neighbors:
   - {fileID: 510206984}
   - {fileID: 1368094044}
-  - {fileID: 1869313793}
   - {fileID: 1123621799}
+  - {fileID: 952639112}
+  - {fileID: 1869313793}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 78
 --- !u!135 &508245142
 SphereCollider:
@@ -5394,9 +5366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 65.35534
+  g: 62.426407
   h: 10
-  f: 75.35534
+  f: 72.42641
   previous: {fileID: 508245141}
   neighbors:
   - {fileID: 1368094044}
@@ -5406,8 +5378,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 79
 --- !u!135 &510206985
 SphereCollider:
@@ -5519,14 +5489,15 @@ MonoBehaviour:
   f: 67.43903
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 1793904839}
   - {fileID: 1623808132}
   - {fileID: 506981476}
+  - {fileID: 623239858}
+  - {fileID: 1191541981}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 46
 --- !u!135 &515278063
 SphereCollider:
@@ -5558,7 +5529,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5633,9 +5604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 51.213203
+  g: 58.28427
   h: 45.276924
-  f: 96.49013
+  f: 103.561195
   previous: {fileID: 1421525142}
   neighbors:
   - {fileID: 609496343}
@@ -5645,8 +5616,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 8
 --- !u!135 &561975881
 SphereCollider:
@@ -5845,20 +5814,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 45.35534
   h: 21.213203
-  f: 63.63961
-  previous: {fileID: 0}
+  f: 66.56854
+  previous: {fileID: 1793904839}
   neighbors:
   - {fileID: 473091856}
   - {fileID: 1869313793}
-  - {fileID: 966338890}
+  - {fileID: 1351897265}
+  - {fileID: 1793904839}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 66
 --- !u!135 &565706826
 SphereCollider:
@@ -5890,7 +5858,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6241,20 +6209,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 53.28427
+  g: 60.35534
   h: 45
-  f: 98.28427
+  f: 105.35534
   previous: {fileID: 1421525142}
   neighbors:
   - {fileID: 2004356807}
-  - {fileID: 561975880}
   - {fileID: 1421525142}
+  - {fileID: 561975880}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 9
 --- !u!135 &609496344
 SphereCollider:
@@ -6453,22 +6419,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 39.142136
   h: 33.54102
-  f: 69.75423
-  previous: {fileID: 0}
+  f: 72.68315
+  previous: {fileID: 506981476}
   neighbors:
-  - {fileID: 499967791}
   - {fileID: 1623808132}
   - {fileID: 148352562}
-  - {fileID: 780605492}
   - {fileID: 506981476}
+  - {fileID: 1191541981}
+  - {fileID: 780605492}
+  - {fileID: 499967791}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 36
 --- !u!135 &623239859
 SphereCollider:
@@ -6500,7 +6465,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7289,12 +7254,11 @@ MonoBehaviour:
   neighbors:
   - {fileID: 954450129}
   - {fileID: 1623808132}
+  - {fileID: 1868769358}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 48
 --- !u!135 &681537459
 SphereCollider:
@@ -7401,23 +7365,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 43.28427
   h: 33.54102
-  f: 73.89636
-  previous: {fileID: 0}
+  f: 76.82529
+  previous: {fileID: 423507740}
   neighbors:
-  - {fileID: 880167055}
-  - {fileID: 369454570}
-  - {fileID: 962660862}
-  - {fileID: 2078688480}
   - {fileID: 1026980640}
+  - {fileID: 880167055}
+  - {fileID: 2078688480}
   - {fileID: 423507740}
+  - {fileID: 369454570}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 63
 --- !u!135 &682287941
 SphereCollider:
@@ -7449,7 +7410,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7533,8 +7494,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 50
 --- !u!135 &696939421
 SphereCollider:
@@ -7566,7 +7525,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8197,14 +8156,13 @@ MonoBehaviour:
   f: 78.28427
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 952639112}
   - {fileID: 981673916}
   - {fileID: 1823180423}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 96
 --- !u!135 &776839087
 SphereCollider:
@@ -8311,21 +8269,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 29.142136
+  g: 36.213203
   h: 40.311287
-  f: 69.45342
-  previous: {fileID: 1323545261}
+  f: 76.52449
+  previous: {fileID: 1400245149}
   neighbors:
-  - {fileID: 499967791}
-  - {fileID: 1323545261}
-  - {fileID: 1400245149}
   - {fileID: 506981476}
+  - {fileID: 623239858}
+  - {fileID: 499967791}
+  - {fileID: 1400245149}
+  - {fileID: 1323545261}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 25
 --- !u!135 &780605493
 SphereCollider:
@@ -8652,14 +8609,12 @@ MonoBehaviour:
   previous: {fileID: 0}
   neighbors:
   - {fileID: 510206984}
-  - {fileID: 1869313793}
   - {fileID: 508245141}
+  - {fileID: 1869313793}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 68
 --- !u!135 &806998975
 SphereCollider:
@@ -8691,7 +8646,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8864,12 +8819,12 @@ MonoBehaviour:
   previous: {fileID: 0}
   neighbors:
   - {fileID: 372483704}
+  - {fileID: 1324275262}
+  - {fileID: 126202720}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 93
 --- !u!135 &817795659
 SphereCollider:
@@ -9078,8 +9033,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 51
 --- !u!135 &844273855
 SphereCollider:
@@ -9283,16 +9236,14 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1030245710}
-  - {fileID: 420281982}
-  - {fileID: 1486369103}
   - {fileID: 1986637453}
+  - {fileID: 1486369103}
+  - {fileID: 420281982}
+  - {fileID: 1030245710}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 10
 --- !u!135 &877233068
 SphereCollider:
@@ -9324,7 +9275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9399,22 +9350,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 45.35534
+  g: 48.28427
   h: 31.622776
-  f: 76.97812
+  f: 79.90704
   previous: {fileID: 2078688480}
   neighbors:
-  - {fileID: 369454570}
-  - {fileID: 962660862}
-  - {fileID: 2078688480}
   - {fileID: 1026980640}
   - {fileID: 372483704}
+  - {fileID: 1324275262}
+  - {fileID: 682287940}
+  - {fileID: 2078688480}
+  - {fileID: 126202720}
+  - {fileID: 369454570}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 73
 --- !u!135 &880167056
 SphereCollider:
@@ -9898,8 +9849,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 5
 --- !u!135 &920263308
 SphereCollider:
@@ -9931,7 +9880,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10282,22 +10231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 57.426407
   h: 11.18034
-  f: 65.67781
-  previous: {fileID: 0}
+  f: 68.60675
+  previous: {fileID: 1869313793}
   neighbors:
-  - {fileID: 473091856}
-  - {fileID: 981673916}
-  - {fileID: 1869313793}
   - {fileID: 508245141}
   - {fileID: 1123621799}
+  - {fileID: 981673916}
+  - {fileID: 473091856}
+  - {fileID: 1869313793}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 87
 --- !u!135 &952639113
 SphereCollider:
@@ -10404,19 +10351,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 51.213203
+  g: 54.142136
   h: 30
-  f: 81.2132
-  previous: {fileID: 206724200}
+  f: 84.142136
+  previous: {fileID: 1868769358}
   neighbors:
   - {fileID: 1115209525}
   - {fileID: 206724200}
+  - {fileID: 1868769358}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 39
 --- !u!135 &954450130
 SphereCollider:
@@ -10523,21 +10469,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 50.35534
+  g: Infinity
   h: 36.40055
   f: 86.75589
-  previous: {fileID: 880167055}
+  previous: {fileID: 0}
   neighbors:
+  - {fileID: 1324275262}
   - {fileID: 880167055}
-  - {fileID: 369454570}
-  - {fileID: 1425721345}
+  - {fileID: 682287940}
+  - {fileID: 126202720}
   - {fileID: 1314178040}
+  - {fileID: 1425721345}
+  - {fileID: 369454570}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 72
 --- !u!135 &962660863
 SphereCollider:
@@ -10569,7 +10516,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10727,23 +10674,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 45.35534
+  g: Infinity
   h: 22.36068
-  f: 67.71602
-  previous: {fileID: 2078688480}
+  f: 70.64495
+  previous: {fileID: 0}
   neighbors:
-  - {fileID: 473091856}
   - {fileID: 981673916}
-  - {fileID: 2078688480}
+  - {fileID: 565706825}
+  - {fileID: 473091856}
   - {fileID: 1026980640}
   - {fileID: 372483704}
   - {fileID: 1823180423}
+  - {fileID: 1351897265}
+  - {fileID: 2078688480}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 75
 --- !u!135 &966338891
 SphereCollider:
@@ -10775,7 +10722,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10954,8 +10901,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 95
 --- !u!135 &974103103
 SphereCollider:
@@ -11164,8 +11109,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 30
 --- !u!135 &981391661
 SphereCollider:
@@ -11197,7 +11140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11272,21 +11215,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 52.426407
+  g: 55.35534
   h: 15.811388
-  f: 68.23779
-  previous: {fileID: 966338890}
+  f: 71.166725
+  previous: {fileID: 473091856}
   neighbors:
+  - {fileID: 952639112}
   - {fileID: 473091856}
   - {fileID: 1869313793}
-  - {fileID: 966338890}
   - {fileID: 1823180423}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 86
 --- !u!135 &981673917
 SphereCollider:
@@ -11630,14 +11571,12 @@ MonoBehaviour:
   f: 73.2254
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1035791226}
   - {fileID: 1902638604}
+  - {fileID: 1035791226}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 3
 --- !u!135 &1019026050
 SphereCollider:
@@ -11744,22 +11683,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 43.28427
+  g: 46.213203
   h: 26.925823
-  f: 70.2101
+  f: 73.13902
   previous: {fileID: 2078688480}
   neighbors:
-  - {fileID: 880167055}
-  - {fileID: 2078688480}
-  - {fileID: 966338890}
   - {fileID: 372483704}
   - {fileID: 1823180423}
+  - {fileID: 1324275262}
+  - {fileID: 880167055}
+  - {fileID: 682287940}
+  - {fileID: 1351897265}
+  - {fileID: 2078688480}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 74
 --- !u!135 &1026980641
 SphereCollider:
@@ -11871,14 +11810,12 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 420281982}
   - {fileID: 1486369103}
+  - {fileID: 420281982}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 0
 --- !u!135 &1030245711
 SphereCollider:
@@ -11990,15 +11927,13 @@ MonoBehaviour:
   f: 67.00877
   previous: {fileID: 420281982}
   neighbors:
-  - {fileID: 420281982}
-  - {fileID: 1486369103}
   - {fileID: 1902638604}
+  - {fileID: 1486369103}
+  - {fileID: 420281982}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 2
 --- !u!135 &1035791227
 SphereCollider:
@@ -13282,21 +13217,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 49.142136
+  g: 56.213203
   h: 35
-  f: 84.142136
-  previous: {fileID: 206724200}
+  f: 91.2132
+  previous: {fileID: 1868769358}
   neighbors:
   - {fileID: 954450129}
+  - {fileID: 206724200}
+  - {fileID: 1868769358}
   - {fileID: 2004356807}
   - {fileID: 1421525142}
-  - {fileID: 206724200}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 29
 --- !u!135 &1115209526
 SphereCollider:
@@ -13403,22 +13337,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 62.426407
+  g: 59.497475
   h: 7.071068
-  f: 69.497475
+  f: 66.56854
   previous: {fileID: 1869313793}
   neighbors:
   - {fileID: 1355849109}
   - {fileID: 510206984}
   - {fileID: 1368094044}
-  - {fileID: 1869313793}
   - {fileID: 508245141}
+  - {fileID: 952639112}
+  - {fileID: 1869313793}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 88
 --- !u!135 &1123621800
 SphereCollider:
@@ -13525,23 +13458,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 21.213203
+  g: 24.142136
   h: 42.426407
-  f: 63.63961
-  previous: {fileID: 1718445758}
+  f: 66.56854
+  previous: {fileID: 460738667}
   neighbors:
-  - {fileID: 1732412941}
-  - {fileID: 460738667}
-  - {fileID: 1718445758}
-  - {fileID: 1323545261}
-  - {fileID: 1400245149}
   - {fileID: 470292657}
+  - {fileID: 1400245149}
+  - {fileID: 1323545261}
+  - {fileID: 460738667}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 33
 --- !u!135 &1125852079
 SphereCollider:
@@ -14021,16 +13950,15 @@ MonoBehaviour:
   f: 77.268715
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 369454570}
+  - {fileID: 682287940}
   - {fileID: 2078688480}
-  - {fileID: 470292657}
   - {fileID: 423507740}
+  - {fileID: 369454570}
+  - {fileID: 470292657}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 53
 --- !u!135 &1177957073
 SphereCollider:
@@ -14229,21 +14157,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 36.213203
   h: 32.01562
-  f: 65.2999
-  previous: {fileID: 0}
+  f: 68.22882
+  previous: {fileID: 470292657}
   neighbors:
-  - {fileID: 1400245149}
-  - {fileID: 506981476}
-  - {fileID: 470292657}
+  - {fileID: 1793904839}
   - {fileID: 423507740}
+  - {fileID: 506981476}
+  - {fileID: 623239858}
+  - {fileID: 470292657}
+  - {fileID: 1400245149}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 45
 --- !u!135 &1191541982
 SphereCollider:
@@ -14275,7 +14203,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14451,8 +14379,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 4
 --- !u!135 &1234041215
 SphereCollider:
@@ -14484,7 +14410,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14931,13 +14857,12 @@ MonoBehaviour:
   h: 22.36068
   f: 67.71602
   previous: {fileID: 0}
-  neighbors: []
+  neighbors:
+  - {fileID: 565706825}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 57
 --- !u!135 &1295385583
 SphereCollider:
@@ -14969,7 +14894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15258,19 +15183,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 57.426407
+  g: 60.35534
   h: 40.311287
-  f: 97.73769
-  previous: {fileID: 962660862}
+  f: 100.666626
+  previous: {fileID: 126202720}
   neighbors:
+  - {fileID: 126202720}
   - {fileID: 1425721345}
-  - {fileID: 962660862}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 81
 --- !u!135 &1314178041
 SphereCollider:
@@ -15377,22 +15300,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 24.142136
+  g: 31.213203
   h: 43.011627
-  f: 67.15376
-  previous: {fileID: 1732412941}
+  f: 74.22483
+  previous: {fileID: 1125852078}
   neighbors:
-  - {fileID: 1125852078}
-  - {fileID: 1732412941}
-  - {fileID: 780605492}
-  - {fileID: 1400245149}
   - {fileID: 506981476}
+  - {fileID: 780605492}
+  - {fileID: 1125852078}
+  - {fileID: 1400245149}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 24
 --- !u!135 &1323545262
 SphereCollider:
@@ -15499,21 +15419,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 53.28427
   h: 30.413813
-  f: 80.76915
-  previous: {fileID: 0}
+  f: 83.69808
+  previous: {fileID: 1026980640}
   neighbors:
-  - {fileID: 880167055}
-  - {fileID: 962660862}
   - {fileID: 1026980640}
   - {fileID: 372483704}
+  - {fileID: 880167055}
+  - {fileID: 126202720}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 83
 --- !u!135 &1324275263
 SphereCollider:
@@ -15545,7 +15463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15804,22 +15722,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 43.28427
   h: 25
-  f: 65.35534
-  previous: {fileID: 0}
+  f: 68.28427
+  previous: {fileID: 1793904839}
   neighbors:
+  - {fileID: 565706825}
   - {fileID: 473091856}
-  - {fileID: 2078688480}
   - {fileID: 1026980640}
-  - {fileID: 966338890}
+  - {fileID: 2078688480}
+  - {fileID: 1793904839}
   - {fileID: 423507740}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 65
 --- !u!135 &1351897266
 SphereCollider:
@@ -15851,7 +15768,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15926,9 +15843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 69.497475
+  g: 66.56854
   h: 0
-  f: 69.497475
+  f: 66.56854
   previous: {fileID: 1123621799}
   neighbors:
   - {fileID: 1368094044}
@@ -15937,8 +15854,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 99
 --- !u!135 &1355849110
 SphereCollider:
@@ -16137,9 +16052,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 67.42641
+  g: 64.497475
   h: 5
-  f: 72.42641
+  f: 69.497475
   previous: {fileID: 1123621799}
   neighbors:
   - {fileID: 1355849109}
@@ -16150,8 +16065,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 89
 --- !u!135 &1368094045
 SphereCollider:
@@ -16544,8 +16457,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 90
 --- !u!135 &1392339064
 SphereCollider:
@@ -16749,23 +16660,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 26.213203
+  g: 29.142136
   h: 39.051247
-  f: 65.26445
+  f: 68.19338
   previous: {fileID: 1125852078}
   neighbors:
-  - {fileID: 1125852078}
-  - {fileID: 1732412941}
-  - {fileID: 1323545261}
-  - {fileID: 780605492}
   - {fileID: 506981476}
+  - {fileID: 1191541981}
+  - {fileID: 780605492}
   - {fileID: 470292657}
+  - {fileID: 1125852078}
+  - {fileID: 1323545261}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 34
 --- !u!135 &1400245150
 SphereCollider:
@@ -17157,8 +17066,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 40
 --- !u!135 &1408581991
 SphereCollider:
@@ -17265,23 +17172,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 46.213203
+  g: 53.28427
   h: 40.311287
-  f: 86.52449
+  f: 93.59556
   previous: {fileID: 148352562}
   neighbors:
+  - {fileID: 1115209525}
+  - {fileID: 206724200}
+  - {fileID: 148352562}
   - {fileID: 609496343}
   - {fileID: 2004356807}
-  - {fileID: 1115209525}
   - {fileID: 561975880}
-  - {fileID: 148352562}
-  - {fileID: 206724200}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 18
 --- !u!135 &1421525143
 SphereCollider:
@@ -17391,17 +17296,15 @@ MonoBehaviour:
   g: 55.35534
   h: 41.231056
   f: 96.586395
-  previous: {fileID: 962660862}
+  previous: {fileID: 369454570}
   neighbors:
-  - {fileID: 369454570}
-  - {fileID: 962660862}
+  - {fileID: 126202720}
   - {fileID: 1314178040}
+  - {fileID: 369454570}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 71
 --- !u!135 &1425721346
 SphereCollider:
@@ -17513,18 +17416,15 @@ MonoBehaviour:
   f: 63.63961
   previous: {fileID: 1030245710}
   neighbors:
-  - {fileID: 1030245710}
+  - {fileID: 1986637453}
+  - {fileID: 1902638604}
   - {fileID: 420281982}
   - {fileID: 1035791226}
-  - {fileID: 1902638604}
-  - {fileID: 1986637453}
-  - {fileID: 1718445758}
+  - {fileID: 1030245710}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 11
 --- !u!135 &1486369104
 SphereCollider:
@@ -17636,17 +17536,15 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 499967791}
-  - {fileID: 561975880}
-  - {fileID: 1421525142}
-  - {fileID: 148352562}
   - {fileID: 206724200}
+  - {fileID: 148352562}
+  - {fileID: 1421525142}
+  - {fileID: 561975880}
+  - {fileID: 499967791}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 17
 --- !u!135 &1506227608
 SphereCollider:
@@ -17678,7 +17576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17758,14 +17656,12 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1425721345}
   - {fileID: 1314178040}
+  - {fileID: 1425721345}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 70
 --- !u!135 &1506607076
 SphereCollider:
@@ -17876,13 +17772,15 @@ MonoBehaviour:
   h: 25
   f: 68.28427
   previous: {fileID: 0}
-  neighbors: []
+  neighbors:
+  - {fileID: 565706825}
+  - {fileID: 1351897265}
+  - {fileID: 1793904839}
+  - {fileID: 1191541981}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 56
 --- !u!135 &1522374806
 SphereCollider:
@@ -17914,7 +17812,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18270,17 +18168,13 @@ MonoBehaviour:
   f: 67.07107
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1732412941}
-  - {fileID: 1035791226}
-  - {fileID: 1902638604}
-  - {fileID: 1718445758}
   - {fileID: 1323545261}
+  - {fileID: 1902638604}
+  - {fileID: 1035791226}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 13
 --- !u!135 &1606525287
 SphereCollider:
@@ -18312,7 +18206,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18392,13 +18286,13 @@ MonoBehaviour:
   f: 98.28427
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 1324275262}
+  - {fileID: 126202720}
   - {fileID: 1314178040}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 92
 --- !u!135 &1618883573
 SphereCollider:
@@ -18430,7 +18324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18505,20 +18399,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 41.213203
+  g: 44.142136
   h: 31.622776
-  f: 72.83598
-  previous: {fileID: 499967791}
+  f: 75.76491
+  previous: {fileID: 623239858}
   neighbors:
-  - {fileID: 499967791}
-  - {fileID: 148352562}
   - {fileID: 206724200}
+  - {fileID: 1868769358}
+  - {fileID: 148352562}
+  - {fileID: 623239858}
+  - {fileID: 499967791}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 37
 --- !u!135 &1623808133
 SphereCollider:
@@ -18630,15 +18524,12 @@ MonoBehaviour:
   f: 69.240974
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1732412941}
-  - {fileID: 1323545261}
   - {fileID: 780605492}
+  - {fileID: 1323545261}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 14
 --- !u!135 &1625402757
 SphereCollider:
@@ -18670,7 +18561,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18843,12 +18734,11 @@ MonoBehaviour:
   previous: {fileID: 0}
   neighbors:
   - {fileID: 954450129}
+  - {fileID: 1868769358}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 49
 --- !u!135 &1636102693
 SphereCollider:
@@ -18960,14 +18850,12 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 561975880}
   - {fileID: 1421525142}
+  - {fileID: 561975880}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 7
 --- !u!135 &1653788895
 SphereCollider:
@@ -19355,17 +19243,15 @@ MonoBehaviour:
   f: 75.26445
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 1125852078}
-  - {fileID: 460738667}
-  - {fileID: 1400245149}
-  - {fileID: 470292657}
   - {fileID: 423507740}
+  - {fileID: 470292657}
+  - {fileID: 1125852078}
+  - {fileID: 1400245149}
+  - {fileID: 460738667}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 43
 --- !u!135 &1672255170
 SphereCollider:
@@ -19704,23 +19590,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 14.142136
+  g: Infinity
   h: 49.497475
-  f: 63.63961
-  previous: {fileID: 1486369103}
+  f: 66.56854
+  previous: {fileID: 0}
   neighbors:
   - {fileID: 1125852078}
-  - {fileID: 1732412941}
   - {fileID: 460738667}
-  - {fileID: 1486369103}
-  - {fileID: 1902638604}
   - {fileID: 1986637453}
+  - {fileID: 1902638604}
+  - {fileID: 1486369103}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 22
 --- !u!135 &1718445759
 SphereCollider:
@@ -19752,7 +19635,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20011,23 +19894,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 19.142136
+  g: Infinity
   h: 46.09772
   f: 65.23985
-  previous: {fileID: 1718445758}
+  previous: {fileID: 0}
   neighbors:
   - {fileID: 1125852078}
+  - {fileID: 1400245149}
+  - {fileID: 1323545261}
   - {fileID: 460738667}
   - {fileID: 1902638604}
-  - {fileID: 1718445758}
-  - {fileID: 1323545261}
-  - {fileID: 1400245149}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 23
 --- !u!135 &1732412942
 SphereCollider:
@@ -20059,7 +19939,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20139,14 +20019,13 @@ MonoBehaviour:
   f: 75.35534
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 981673916}
   - {fileID: 1123621799}
+  - {fileID: 952639112}
+  - {fileID: 981673916}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 97
 --- !u!135 &1733449099
 SphereCollider:
@@ -20805,20 +20684,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 38.28427
   h: 28.284271
-  f: 63.63961
-  previous: {fileID: 0}
+  f: 66.56854
+  previous: {fileID: 470292657}
   neighbors:
+  - {fileID: 565706825}
+  - {fileID: 1351897265}
   - {fileID: 2078688480}
-  - {fileID: 470292657}
   - {fileID: 423507740}
+  - {fileID: 1191541981}
+  - {fileID: 470292657}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 55
 --- !u!135 &1793904840
 SphereCollider:
@@ -20850,7 +20730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20925,22 +20805,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 50.35534
+  g: 53.28427
   h: 20.615528
-  f: 70.97087
-  previous: {fileID: 966338890}
+  f: 73.899796
+  previous: {fileID: 1026980640}
   neighbors:
-  - {fileID: 473091856}
   - {fileID: 981673916}
+  - {fileID: 473091856}
   - {fileID: 1026980640}
-  - {fileID: 966338890}
   - {fileID: 372483704}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 85
 --- !u!135 &1823180424
 SphereCollider:
@@ -21144,13 +21021,12 @@ MonoBehaviour:
   f: 105.35534
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 126202720}
   - {fileID: 1314178040}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 91
 --- !u!135 &1837020489
 SphereCollider:
@@ -21357,12 +21233,11 @@ MonoBehaviour:
   - {fileID: 1355849109}
   - {fileID: 1368094044}
   - {fileID: 1123621799}
+  - {fileID: 952639112}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 98
 --- !u!135 &1848198587
 SphereCollider:
@@ -21561,22 +21436,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: Infinity
+  g: 49.142136
   h: 30.413813
-  f: 76.627014
-  previous: {fileID: 0}
+  f: 79.55595
+  previous: {fileID: 1623808132}
   neighbors:
-  - {fileID: 954450129}
   - {fileID: 1115209525}
+  - {fileID: 954450129}
+  - {fileID: 206724200}
   - {fileID: 1623808132}
   - {fileID: 148352562}
-  - {fileID: 206724200}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 38
 --- !u!135 &1868769359
 SphereCollider:
@@ -21608,7 +21481,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21683,21 +21556,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 55.35534
+  g: 52.426407
   h: 14.142136
-  f: 69.497475
-  previous: {fileID: 473091856}
+  f: 66.56854
+  previous: {fileID: 565706825}
   neighbors:
-  - {fileID: 473091856}
-  - {fileID: 981673916}
   - {fileID: 508245141}
   - {fileID: 1123621799}
+  - {fileID: 952639112}
+  - {fileID: 981673916}
+  - {fileID: 565706825}
+  - {fileID: 473091856}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 77
 --- !u!135 &1869313794
 SphereCollider:
@@ -22177,18 +22050,14 @@ MonoBehaviour:
   f: 65.2218
   previous: {fileID: 1486369103}
   neighbors:
-  - {fileID: 1732412941}
+  - {fileID: 1986637453}
+  - {fileID: 1486369103}
   - {fileID: 420281982}
   - {fileID: 1035791226}
-  - {fileID: 1486369103}
-  - {fileID: 1986637453}
-  - {fileID: 1718445758}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 12
 --- !u!135 &1902638605
 SphereCollider:
@@ -22300,15 +22169,14 @@ MonoBehaviour:
   f: 68.383095
   previous: {fileID: 0}
   neighbors:
+  - {fileID: 508245141}
+  - {fileID: 565706825}
   - {fileID: 473091856}
   - {fileID: 1869313793}
-  - {fileID: 508245141}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 67
 --- !u!135 &1904989037
 SphereCollider:
@@ -22340,7 +22208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23141,15 +23009,12 @@ MonoBehaviour:
   previous: {fileID: 1486369103}
   neighbors:
   - {fileID: 460738667}
-  - {fileID: 1486369103}
   - {fileID: 1902638604}
-  - {fileID: 1718445758}
+  - {fileID: 1486369103}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 21
 --- !u!135 &1986637454
 SphereCollider:
@@ -23181,7 +23046,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23256,22 +23121,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 51.213203
+  g: 58.28427
   h: 40
-  f: 91.2132
+  f: 98.28427
   previous: {fileID: 206724200}
   neighbors:
-  - {fileID: 609496343}
   - {fileID: 1115209525}
-  - {fileID: 561975880}
-  - {fileID: 1421525142}
   - {fileID: 206724200}
+  - {fileID: 609496343}
+  - {fileID: 1421525142}
+  - {fileID: 561975880}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 19
 --- !u!135 &2004356808
 SphereCollider:
@@ -23480,8 +23343,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 60
 --- !u!135 &2028735147
 SphereCollider:
@@ -23781,8 +23642,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 58
 --- !u!135 &2048225817
 SphereCollider:
@@ -23814,7 +23673,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24078,15 +23937,13 @@ MonoBehaviour:
   f: 74.79109
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 499967791}
   - {fileID: 148352562}
   - {fileID: 780605492}
+  - {fileID: 499967791}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 16
 --- !u!135 &2052637403
 SphereCollider:
@@ -24198,15 +24055,12 @@ MonoBehaviour:
   f: 0
   previous: {fileID: 0}
   neighbors:
-  - {fileID: 369454570}
   - {fileID: 1425721345}
-  - {fileID: 962660862}
+  - {fileID: 369454570}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 61
 --- !u!135 &2061230002
 SphereCollider:
@@ -24313,21 +24167,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75e862411f874d44be04b009880eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: 38.28427
+  g: 41.213203
   h: 29.15476
-  f: 67.43903
+  f: 70.367966
   previous: {fileID: 423507740}
   neighbors:
-  - {fileID: 880167055}
   - {fileID: 1026980640}
-  - {fileID: 966338890}
+  - {fileID: 880167055}
+  - {fileID: 682287940}
+  - {fileID: 1351897265}
+  - {fileID: 1793904839}
   - {fileID: 423507740}
   radius: 5
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 1
   NodeID: 64
 --- !u!135 &2078688481
 SphereCollider:
@@ -24359,7 +24213,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f6ac09216687ec48899d6775161960e, type: 2}
+  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24719,8 +24573,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 59
 --- !u!135 &2105414284
 SphereCollider:
@@ -24928,8 +24780,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 0
-  isPath: 0
   NodeID: 6
 --- !u!135 &2118128168
 SphereCollider:
@@ -24961,7 +24811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277f2da255a84dd4e9624f886ab6d571, type: 2}
+  - {fileID: 2100000, guid: 9c532c479674288488ec5f823ab59691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25047,8 +24897,6 @@ MonoBehaviour:
   nodesLayer:
     serializedVersion: 2
     m_Bits: 256
-  isBlocked: 1
-  isPath: 0
   NodeID: 69
 --- !u!135 &2144940274
 SphereCollider:

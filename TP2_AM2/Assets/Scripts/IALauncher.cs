@@ -21,7 +21,7 @@ public class IALauncher : MonoBehaviour
             path = _aStar.GetPath(_initialNode, _endNode);
             foreach (var item in path)
             {
-                item.isPath = true;
+                item.IsPath = true;
             }
         }
     }

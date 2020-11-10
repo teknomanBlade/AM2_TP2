@@ -13,6 +13,7 @@ public class NodeEditor : Editor
     private GUIStyle _guiStyleBtnText;
     private GUIStyle _guiStyleSubTitle;
     public bool _showData;
+    private NodeEditorWindow _nodeEditorWindow;
     private void OnEnable()
     {
         _target = (Node)target;
@@ -36,7 +37,7 @@ public class NodeEditor : Editor
             var p = Camera.current.WorldToScreenPoint(_target.transform.position);
             //calculamos posición...
             var r = new Rect(p.x - 50, Screen.height - p.y - 50, 80, 30);
-            if (GUI.Button(r, "Show Info")) {
+            if (GUI.Button(r, "Node Data")) {
                 _showData = !_showData;
             }
 
@@ -48,7 +49,10 @@ public class NodeEditor : Editor
 
     private void DrawInspectorInScene()
     {
-        EditorGUI.BeginChangeCheck();
+        _nodeEditorWindow = EditorWindow.GetWindow<NodeEditorWindow>();
+        _nodeEditorWindow.Initialize(_target);
+        _nodeEditorWindow.Show();
+        /*EditorGUI.BeginChangeCheck();
         GUILayout.BeginArea(new Rect(20, 20, 250, 250));
         var rec = EditorGUILayout.BeginVertical();
         //me crea un fondo de color que ocupa todo el rect creado por el Begin/EndVertical
@@ -80,6 +84,6 @@ public class NodeEditor : Editor
             {
                 EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
             }
-        }
+        }*/
     }
 }

@@ -19,9 +19,44 @@ public class Node : MonoBehaviour
     //Layer de los nodos
     public LayerMask nodesLayer;
     //Si el nodo esta bloqueado o si se puede caminar por el
-    public bool isBlocked;
+    private bool _isBlocked;
+    public bool IsBlocked {
+        get {
+            return _isBlocked;
+        }
+        set {
+            _isBlocked = value;
+            if (_isBlocked)
+            {
+                transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeBlocked");
+            }
+            else
+            {
+                transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+            }
+        }
+    }
     //Una vez que ya tengo un camino paso esto a true solo para los gizmos
-    public bool isPath;
+    private bool _isPath;
+    public bool IsPath
+    {
+        get
+        {
+            return _isPath;
+        }
+        set
+        {
+            _isPath = value;
+            if (_isPath)
+            {
+                transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
+            }
+            else
+            {
+                transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+            }
+        }
+    }
     public int NodeID;
    
 
@@ -37,7 +72,7 @@ public class Node : MonoBehaviour
             //Nos aseguramos que no este bloqueado y que no sea el mismo en el que ya estamos
             //y los agregamos a la lista de vecinos
             var node = item.GetComponent<Node>();
-            if (node && !node.isBlocked && node != this)
+            if (node && !node._isBlocked && node != this)
                 neighbors.Add(node);
         }
     }

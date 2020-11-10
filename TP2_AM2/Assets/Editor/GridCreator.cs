@@ -44,15 +44,15 @@ public class GridCreator : EditorWindow
         EditorGUILayout.BeginVertical(GUILayout.Height(110));
         GUILayout.Label("Seleccione ancho y alto de la grilla. El mínimo es 2x2");
         EditorGUILayout.BeginHorizontal(GUILayout.Width(10));
-        width= EditorGUILayout.IntField("Ancho", width);
-        height = EditorGUILayout.IntField("Alto", height);
+            width= EditorGUILayout.IntField("Ancho", width);
+            height = EditorGUILayout.IntField("Alto", height);
         EditorGUILayout.EndHorizontal();
-        GUILayout.Label("Seleccione posición inicial de la grila en X, Y y Z");
+            GUILayout.Label("Seleccione posición inicial de la grila en X, Y y Z");
         EditorGUILayout.BeginHorizontal(GUILayout.Width(5));
-        _posX= EditorGUILayout.FloatField("X", _posX);
-        _posY= EditorGUILayout.FloatField("Y", _posY);
-        _posZ = EditorGUILayout.FloatField("Z", _posZ);
-        InitialPos = new Vector3(_posX, _posY, _posZ);
+            _posX= EditorGUILayout.FloatField("X", _posX);
+            _posY= EditorGUILayout.FloatField("Y", _posY);
+            _posZ = EditorGUILayout.FloatField("Z", _posZ);
+            InitialPos = new Vector3(_posX, _posY, _posZ);
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.EndVertical();
@@ -68,10 +68,10 @@ public class GridCreator : EditorWindow
         }
 
 
-        if (GUILayout.Button("Cerrar ventana"))
+        /*if (GUILayout.Button("Cerrar ventana"))
         {
             Close();
-        }
+        }*/
 
     }
 

@@ -145,7 +145,7 @@ public class IAManager : EditorWindow
             {
                 EditorGUILayout.BeginVertical();
                     HighlightInitialAndFinalNodes(PathIA, i);
-                    PathIA[i].isPath = true;
+                    PathIA[i].IsPath = true;
                     PathIA[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
                     EditorGUILayout.BeginHorizontal();
                     PathIA[i].gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, PathIA[i].gameObject.transform.position);
@@ -168,9 +168,9 @@ public class IAManager : EditorWindow
         foreach (var item in _nodesGenerator.grid)
         {
             item.ClearNode();
-            if (item.isPath) {
-                item.isPath = false;
-                item.transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
+            if (item.IsPath) {
+                item.IsPath = false;
+                //item.transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodeUnblocked");
             }
                 
             item.neighbors = new List<Node>();
