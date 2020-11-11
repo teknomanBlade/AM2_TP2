@@ -11,6 +11,7 @@ public class GridCreator : EditorWindow
     public int width;
     //nodos de alto de la grilla
     public int height;
+    public float radius;
     //posición inicial de la grilla
     public Vector3 InitialPos;
     //floats de la posición inicial de la grilla
@@ -44,17 +45,17 @@ public class GridCreator : EditorWindow
         EditorGUILayout.BeginVertical(GUILayout.Height(110));
         GUILayout.Label("Seleccione ancho y alto de la grilla. El mínimo es 2x2");
         EditorGUILayout.BeginHorizontal(GUILayout.Width(10));
-            width= EditorGUILayout.IntField("Ancho", width);
-            height = EditorGUILayout.IntField("Alto", height);
-        EditorGUILayout.EndHorizontal();
-            GUILayout.Label("Seleccione posición inicial de la grila en X, Y y Z");
-        EditorGUILayout.BeginHorizontal(GUILayout.Width(5));
-            _posX= EditorGUILayout.FloatField("X", _posX);
-            _posY= EditorGUILayout.FloatField("Y", _posY);
-            _posZ = EditorGUILayout.FloatField("Z", _posZ);
-            InitialPos = new Vector3(_posX, _posY, _posZ);
+            GUILayout.Label("Ancho");
+            width = EditorGUILayout.IntField(GUIContent.none, width, GUILayout.Width(50));
+            GUILayout.Label("Alto");
+            height = EditorGUILayout.IntField(GUIContent.none, height, GUILayout.Width(50));
         EditorGUILayout.EndHorizontal();
 
+            GUILayout.Label("Seleccione posición inicial de la grila en X, Y y Z");
+        EditorGUILayout.BeginHorizontal(GUILayout.Width(5));
+            InitialPos = EditorGUILayout.Vector3Field(GUIContent.none, InitialPos);
+        EditorGUILayout.EndHorizontal();
+        radius = EditorGUILayout.FloatField("Radio Detección Nodos: ", radius);
         EditorGUILayout.EndVertical();
                
         if(GUILayout.Button("Crear Grilla"))
@@ -63,6 +64,7 @@ public class GridCreator : EditorWindow
             //pasar parámetros de ancho alto y posición a Nico
             Grid_Generator.height = height;
             Grid_Generator.width = width;
+            Grid_Generator.Radius = radius;
             Grid_Generator.InitialPos = InitialPos;
             Grid_Generator.GenerateGrid();
         }
