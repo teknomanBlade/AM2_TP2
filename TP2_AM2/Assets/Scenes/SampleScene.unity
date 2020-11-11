@@ -1579,8 +1579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 767901930754136641, guid: b024283aa5801544aa3789346658b730, type: 3}
-  width: 2
-  height: 2
+  width: 15
+  height: 15
   offset: 5
   InitialPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &264511333
@@ -5402,13 +5402,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 22.1, y: 54.4, z: 20.39}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 14.4, y: 54.4, z: 20.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 163, z: 120}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &973735257
 GameObject:
   m_ObjectHideFlags: 0

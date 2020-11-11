@@ -20,22 +20,19 @@ public class GridGenerator : MonoBehaviour
         }
     }
     private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
-	private List<Node> _myNodes = new List<Node>(); //lista de todos los nodos generados
+	public Vector3 InitialPos; //posición inicial de la grilla, Nico fijate de usarla
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		//GenerateGrid();
-	}
+	private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
+	private List<Node> _myNodes = new List<Node>(); //lista de todos los nodos generados
 
 	//Crea un los nodos adentro de un contenedor, según el width, height y offset
 	public void GenerateGrid()
 	{
 		if (_container != null) return;
 
-        _myNodes.Clear();
-        _container = new GameObject().transform;
-        _container.transform.gameObject.AddComponent<NodesGenerator>();
+		_myNodes.Clear();
+		_container = new GameObject().transform;
+		_container.transform.gameObject.AddComponent<NodesGenerator>();
 		_container.position = Vector3.zero;
 		_container.transform.name = "AllNodes";
 
@@ -55,10 +52,10 @@ public class GridGenerator : MonoBehaviour
 
 			}
 		}
-        var nodesGenerator = _container.gameObject.GetComponent<NodesGenerator>();
-        nodesGenerator.grid = _myNodes;
+		var nodesGenerator = _container.gameObject.GetComponent<NodesGenerator>();
+		nodesGenerator.grid = _myNodes;
 
-        Debug.Log("I created the grid");
+		Debug.Log("I created the grid");
 
 		StartCoroutine(CheckNode());
 	}
@@ -66,20 +63,24 @@ public class GridGenerator : MonoBehaviour
 	//Necesito la corrutina para que no se llamen las funciones en el mismo frame
 	IEnumerator CheckNode()
 	{
+		List<Node> nodeToRemove = new List<Node>();
 		yield return new WaitForSeconds(0.01f);
-		CheckAndDeactivate();
-	}
-
-	//Desactiva los nodos que considera que estan fuera del nivel
-	void CheckAndDeactivate()
-	{
 		for (int i = 0; i < _myNodes.Count; i++)
 		{
 			var tempNode = _myNodes[i].NodesToDeactivate();
 			if (tempNode != null)
-				tempNode.gameObject.SetActive(false);
+			{
+				nodeToRemove.Add(tempNode);
+				DestroyImmediate(tempNode.gameObject);
+			}
+		}
 
-            _myNodes[i].CheckNeighbors();
+		for (int i = 0; i < nodeToRemove.Count; i++)
+		{
+			if (_myNodes.Contains(nodeToRemove[i]))
+			{
+				_myNodes.Remove(nodeToRemove[i]);
+			}
 		}
 	}
 }
