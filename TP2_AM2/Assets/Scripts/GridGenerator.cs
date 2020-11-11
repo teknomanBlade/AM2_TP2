@@ -20,9 +20,6 @@ public class GridGenerator : MonoBehaviour
         }
     }
     private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
-	public Vector3 InitialPos; //posición inicial de la grilla, Nico fijate de usarla
-
-	private Transform _container; //acá guardo los nodos que genero para que no sea un lío la jerarquia 
 	private List<Node> _myNodes = new List<Node>(); //lista de todos los nodos generados
 
 	//Crea un los nodos adentro de un contenedor, según el width, height y offset

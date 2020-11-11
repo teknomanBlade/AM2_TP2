@@ -13,7 +13,7 @@ public class NodeEditorWindow : EditorWindow
     public int SetNodeID;
     public Node Nodo;
     private bool _showFoldout;
-
+    private Vector2 scrollPos;
     /*[MenuItem("Custom Tools/Node Editor")]
     public static void OpenWindow()
     {
@@ -55,7 +55,7 @@ public class NodeEditorWindow : EditorWindow
 
         EditorGUILayout.BeginHorizontal();
         Nodo = (Node)EditorGUILayout.ObjectField("Nodo: ", Nodo, typeof(Node), true);
-        if (GUILayout.Button("Select On Scene"))
+        if (GUILayout.Button("Select On Scene", GUILayout.Width(120)))
         {
             EditorGUIUtility.PingObject(Nodo);
             Selection.activeGameObject = Nodo.gameObject;
@@ -70,20 +70,36 @@ public class NodeEditorWindow : EditorWindow
             
             Nodo.IsBlocked = EditorGUILayout.Toggle("Is Blocked: ", Nodo.IsBlocked);
             Nodo.IsPath = EditorGUILayout.Toggle("Is Path: ", Nodo.IsPath);
-            
+            if (Nodo.IsPath) {
+                EditorGUILayout.BeginHorizontal();
+                Nodo.previous = (Node)EditorGUILayout.ObjectField("Nodo Previo: ", Nodo.previous, typeof(Node), true);
+                if (GUILayout.Button("Select Previous", GUILayout.Width(120)))
+                {
+                    EditorGUIUtility.PingObject(Nodo.previous);
+                    Selection.activeGameObject = Nodo.previous.gameObject;
+                }
+                EditorGUILayout.EndHorizontal();
+            }
+
             _showFoldout = EditorGUILayout.Foldout(_showFoldout, "La cantidad de nodos vecinos es "+ Nodo.neighbors.Count);
-            if (_showFoldout && Nodo.neighbors.Count!=0)
+            if (_showFoldout && Nodo.neighbors.Count != 0)
             {
-                EditorGUILayout.BeginVertical();
+                scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Height(550));
                 for (int i = 0; i < Nodo.neighbors.Count; i++)
                 {
                     EditorGUILayout.BeginHorizontal();
                         EditorGUILayout.IntField("ID Vecino " + (i+1), Nodo.neighbors[i].NodeID);
                         Nodo.neighbors[i] = (Node)EditorGUILayout.ObjectField(GUIContent.none, Nodo.neighbors[i], typeof(Node), true);
+                        if (GUILayout.Button("Select Neighbour", GUILayout.Width(120)))
+                        {
+                            EditorGUIUtility.PingObject(Nodo.neighbors[i]);
+                            Selection.activeGameObject = Nodo.neighbors[i].gameObject;
+                        }
                     EditorGUILayout.EndHorizontal();
                 }
-                EditorGUILayout.EndVertical();
+                EditorGUILayout.EndScrollView();
             }
+            
         }
         if (!Application.isPlaying)
         {

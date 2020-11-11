@@ -95,11 +95,17 @@ public class IAManager : EditorWindow
             {
                 AStar.NodesGenerator = _nodesGenerator;
                 PathIA = AStar.GetPath(_initialNode, _endNode);
-                Debug.Log("TIENE DUPLICADOS? " + PathIA.Count);
+                //Debug.Log("TIENE DUPLICADOS? " + PathIA.Count);
                 var noDuplicates = PathIA.Distinct();
-                Debug.Log("FILTRA DUPLICADOS? " + noDuplicates.ToList().Count);
+                //Debug.Log("FILTRA DUPLICADOS? " + noDuplicates.ToList().Count);
                 PathIA = noDuplicates.ToList();
-                
+
+                //Fix para volver a cargar el Path en la ventana de visualización.
+                if (_previewWindow != null) {
+                    _previewWindow.Initialize(PathIA);
+                    _previewWindow.Focus();
+                }
+
                 IsNullNodeInitialAndFinal = false;
             }
             else {
@@ -119,6 +125,8 @@ public class IAManager : EditorWindow
         if (GUILayout.Button("Clear Path Nodes"))
         {
             ClearPathNodes();
+            if (_previewWindow != null)
+                _previewWindow.Focus();
         }
 
         if (PathIA.Count > 0) {
@@ -146,7 +154,7 @@ public class IAManager : EditorWindow
                 EditorGUILayout.BeginVertical();
                     HighlightInitialAndFinalNodes(PathIA, i);
                     PathIA[i].IsPath = true;
-                    PathIA[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
+                    //PathIA[i].transform.gameObject.GetComponent<MeshRenderer>().material = Resources.Load<Material>("MaterialNodePath");
                     EditorGUILayout.BeginHorizontal();
                     PathIA[i].gameObject.transform.position = EditorGUILayout.Vector3Field(GUIContent.none, PathIA[i].gameObject.transform.position);
                     if(GUILayout.Button("Select")){
