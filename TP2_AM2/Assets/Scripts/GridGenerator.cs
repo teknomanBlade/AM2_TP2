@@ -38,7 +38,7 @@ public class GridGenerator : MonoBehaviour
 		{
 			for (int j = 0; j < height; j++)
 			{
-				var tempNode = Instantiate(sphere, new Vector3(j * offset, 0, i * offset), Quaternion.identity);
+				var tempNode = Instantiate(sphere, new Vector3(j * offset + InitialPos.x, 0 + InitialPos.y, i * offset + InitialPos.x), Quaternion.identity);
 				tempNode.transform.SetParent(_container);
 				tempNode.transform.name = "Node " + counter;
                 tempNode.NodeID = counter;
